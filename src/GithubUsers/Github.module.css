@@ -1,0 +1,18 @@
+.data{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    gap: 5px;
+    border: 1px solid grey;
+}
+.inner{
+    border: 1px solid blue;
+    width: 60%;
+    margin: auto;
+}
+
+.inner img{
+    width: 90%;
+}
