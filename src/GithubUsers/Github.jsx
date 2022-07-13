@@ -7,6 +7,7 @@ import styles from "../GithubUsers/Github.module.css";
 export const Github = () => {
   const [text, setText] = useState("");
   const [data, setData] = useState([]);
+
   useEffect(() => {
     showUsers();
   }, []);
@@ -25,8 +26,13 @@ export const Github = () => {
       .then((r) => {
         console.log(r.data.items);
         setData(r.data.items);
+      }).catch((e) => {
+        console.log('empty string')
+        setData([])
       });
   }
+ 
+  if(data.length === 0) return <h1>Search some thing after refresh</h1>
 
   return (
     <div>
